@@ -144,10 +144,16 @@
       height: 250px;
       width: 250px;
 
-      img {
+      .img {
         height: 100%;
         width: 100%;
         object-fit: contain;
+
+
+        &.active {
+          transform: translateX(45rem);
+          transition: all ease 2.5s;
+        }
       }
     }
 
@@ -163,6 +169,23 @@
         align-items: center;
         gap: 2rem;
 
+        &.active {
+          border: 1px solid rgb(242, 242, 242);
+          background-color: rgb(235, 235, 235);
+          color: black;
+          font-size: 700;
+          transform: translateX(-45rem);
+          transition: all ease 2.5s;
+          padding: 0.5rem 0.4rem;
+          border-radius: 0.3rem;
+  
+          &:hover {
+            transform: all ease 0.4s;
+            background-color: yellow;
+            font-size: 700;
+          }
+        }
+
         img {
           height: 2rem;
         }
@@ -171,10 +194,15 @@
           font-weight: 400;
           font-style: normal;
           font-family: "Playfair", "Playfair Placeholder", serif;
-          color: #ffffff;
+          color: #000000;
           font-size: 20px;
           letter-spacing: 0em;
           line-height: 1.5;
+
+
+          &.active {
+            color: black;
+          }
         }
       }
     }
