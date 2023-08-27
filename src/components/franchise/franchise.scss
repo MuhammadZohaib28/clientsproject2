@@ -7,19 +7,13 @@
   background-color: rgb(0, 0, 0);
   position: relative;
 
-  .border{
+  .border {
     position: absolute;
     top: 0;
     width: 100%;
-    
   }
 
-
-
-
-
-
-  .bg{
+  .bg {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -115,6 +109,10 @@
     padding: 7rem 4rem;
     gap: 2rem;
 
+    .bgmobile {
+      display: none;
+    }
+
     .images {
       // border: 1px solid red;
       height: 245px;
@@ -131,11 +129,41 @@
         height: 100%;
         width: 100%;
         border-radius: 1rem;
+        -webkit-animation: kenburns-top 6s ease-out infinite both;
+        animation: kenburns-top 6s ease-out infinite both;
+
+        @-webkit-keyframes kenburns-top {
+          0% {
+            -webkit-transform: scale(1) translateY(0);
+            transform: scale(1) translateY(0);
+            -webkit-transform-origin: 50% 16%;
+            transform-origin: 50% 16%;
+          }
+          100% {
+            -webkit-transform: scale(1.25) translateY(-15px);
+            transform: scale(1.25) translateY(-15px);
+            -webkit-transform-origin: top;
+            transform-origin: top;
+          }
+        }
+        @keyframes kenburns-top {
+          0% {
+            -webkit-transform: scale(1) translateY(0);
+            transform: scale(1) translateY(0);
+            -webkit-transform-origin: 50% 16%;
+            transform-origin: 50% 16%;
+          }
+          100% {
+            -webkit-transform: scale(1.1) translateY(-15px);
+            transform: scale(1.1) translateY(-15px);
+            -webkit-transform-origin: top;
+            transform-origin: top;
+          }
+        }
       }
     }
 
     h1 {
-
       font-size: 2.4rem;
     }
 
@@ -153,14 +181,14 @@
         transition: all ease 0.6s;
         border-radius: 0.3rem;
 
-         &:hover{
+        &:hover {
           background-color: yellow;
           padding: 0.4rem 1rem;
           border-radius: 0.3rem;
           color: black;
           font-weight: 700;
           transition: all ease 0.6s;
-         }
+        }
       }
 
       .nameemail {
@@ -191,7 +219,6 @@
   }
 }
 
-
 @media (min-width: 1199px) {
   .franchise {
     display: flex;
@@ -202,17 +229,27 @@
     background-color: rgb(0, 0, 0);
     position: relative;
 
+    .bgmobile {
+      display: none;
+    }
 
-  .border{
-    position: absolute;
-    top: 10rem;
-    left: 0;
-    width: 100%;
-    background-color: black;
-    z-index: 1;
-    background: transparent;
+    .border {
+      position: absolute;
+      top: 10rem;
+      left: 0;
+      width: 100%;
+      background-color: black;
+      z-index: 1;
+      background: transparent;
+    }
 
-  }
+    .bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 3.3rem;
+      left: 0;
+    }
 
     .images {
       // border: 1px solid red;
@@ -225,7 +262,7 @@
       gap: 1rem;
       border-radius: 2rem;
       padding: 1rem;
-  
+
       img {
         height: 100%;
         width: 100%;
@@ -233,7 +270,7 @@
         border-radius: 2rem;
       }
     }
-  
+
     h1 {
       white-space: pre-wrap;
       word-wrap: break-word;
@@ -246,7 +283,7 @@
       letter-spacing: 0em;
       line-height: 1.2;
     }
-  
+
     .form {
       // border: 1px solid red;
       width: 40%;
@@ -256,7 +293,7 @@
       align-items: center;
       gap: 1rem;
       margin: 3rem auto;
-  
+
       button {
         background: none;
         font-weight: 500;
@@ -267,11 +304,11 @@
         margin-top: 2rem;
         cursor: pointer;
       }
-  
+
       .nameemail {
         display: flex;
         gap: 1rem;
-  
+
         input {
           background-color: #ebebeb;
           border-radius: 0.4rem;
@@ -283,7 +320,7 @@
           font-size: 1rem;
         }
       }
-  
+
       textarea {
         resize: none;
         width: 31rem;
@@ -300,9 +337,37 @@
   .franchise {
     padding: 13rem 1.5rem;
     gap: 2rem;
+    position: relative;
+
+    .border {
+      position: absolute;
+      top: 18rem;
+      left: 0;
+      width: 100%;
+      background-color: black;
+      z-index: 1;
+      background: transparent;
+    }
+
+    .bgmobile {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: -10rem;
+      left: 0;
+    }
+
+    .bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: -10rem;
+      left: 0;
+      display: none;
+    }
 
     .images {
-      border: 1px solid red;
+      // border: 1px solid red;
       height: 200px;
       width: 220px;
       display: flex;
@@ -329,7 +394,7 @@
     }
 
     .form {
-      border: 1px solid red;
+      // border: 1px solid red;
       width: 100%;
       // padding: 1rem;
       display: flex;
@@ -345,16 +410,15 @@
         transition: all ease 0.6s;
         border-radius: 0.3rem;
 
-         &:hover{
+        &:hover {
           background-color: yellow;
           padding: 0.4rem 1rem;
           border-radius: 0.3rem;
           color: black;
           font-weight: 700;
           transition: all ease 0.6s;
-         }
+        }
       }
-
 
       .nameemail {
         display: flex;

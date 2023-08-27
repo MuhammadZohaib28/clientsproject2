@@ -2,14 +2,16 @@ import React from "react";
 import { images } from "../data";
 import "./franchise.scss";
 import background from '../../assets/blob-scene-haikei.svg'
+import backgroundmobile from '../../assets/blob-scene-haikei2.svg'
 import border from '../../assets/wave-haikei3.svg'
 
 const Franchise = () => {
   return (
     <div className="franchise">
       <img src={background} alt="" className="bg"/>
+      <img src={backgroundmobile} alt="" className="bgmobile"/>
       <h1>Book a franchise</h1>
-      <img src={border} alt="" className="border"/>
+      {/* <img src={border} alt="" className="border"/> */}
 
       <form
         action="https://docs.google.com/forms/d/e/1FAIpQLSdLvdk2ODyKBW7m6BYAI6jWkmJM5eADR8T_yfzMAxdrNlAF2A/formResponse"

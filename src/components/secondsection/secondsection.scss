@@ -15,11 +15,14 @@
   .image {
     height: 250px;
     width: 250px;
+    
 
     .img {
       height: 100%;
       width: 100%;
       object-fit: contain;
+      
+
 
       &.active {
         transform: translateX(45rem);
@@ -50,6 +53,8 @@
         transition: all ease 2.5s;
         padding: 0.5rem 0.4rem;
         border-radius: 0.3rem;
+        background: url("../../assets/button1.svg");
+        background-size: cover;
 
         &:hover {
           transform: all ease 0.4s;
@@ -182,6 +187,8 @@
           transition: all ease 2.5s;
           padding: 0.5rem 0.4rem;
           border-radius: 0.3rem;
+          background: url("../../assets/button1.svg");
+          background-size: cover;
 
           &:hover {
             transform: all ease 0.4s;

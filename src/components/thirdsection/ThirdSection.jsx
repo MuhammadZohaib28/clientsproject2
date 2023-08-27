@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./thirdsection.scss";
 // import picture from "../../assets/check.png";
 import video from "../../assets/Untitled video - Made with Clipchamp (1).mp4";
@@ -9,6 +9,18 @@ import Slider from "../slider/Slider";
 import border from '../../assets/wave-haikei2.svg'
 
 const ThirdSection = () => {
+  const [active, setActive] = useState(false);
+  const isActive = () => {
+    window.scrollY > 680 ? setActive(true) : setActive(false);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", isActive);
+
+    return () => {
+      window.removeEventListener("scroll", isActive);
+    };
+  }, []);
   return (
     <div className="thirdsection">
       <img src={border} alt="" className="border"/>
@@ -17,7 +29,7 @@ const ThirdSection = () => {
           <video src={video} autoPlay loop controls></video>
         </div>
         <div className="right">
-          <h1>How On The Way Works?</h1>
+          <h1 className={active ? "h1 active" : "h1"}>How On The Way Works?</h1>
           <span></span>
         </div>
       </div>

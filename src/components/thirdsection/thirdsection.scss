@@ -8,13 +8,13 @@
   padding: 5rem;
   position: relative;
 
-  .border{
+  .border {
     position: absolute;
     top: 0;
     width: 100%;
   }
 
-  .bottom{
+  .bottom {
     // border: 1px solid yellow;
     width: 100%;
   }
@@ -44,7 +44,7 @@
     }
 
     .right {
-      h1 {
+      .h1 {
         width: 100%;
         height: auto;
         white-space: pre-wrap;
@@ -58,46 +58,81 @@
         font-size: 32px;
         letter-spacing: 0em;
         line-height: 1.2;
+
+        &.active {
+          -webkit-animation: tracking-in-expand-fwd 1.8s
+            cubic-bezier(0.215, 0.61, 0.355, 1) both;
+          animation: tracking-in-expand-fwd 1.8s
+            cubic-bezier(0.215, 0.61, 0.355, 1) both;
+
+          @-webkit-keyframes tracking-in-expand-fwd {
+            0% {
+              letter-spacing: -0.5em;
+              -webkit-transform: translateZ(-700px);
+              transform: translateZ(-700px);
+              opacity: 0;
+            }
+            40% {
+              opacity: 0.6;
+            }
+            100% {
+              -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+              opacity: 1;
+            }
+          }
+          @keyframes tracking-in-expand-fwd {
+            0% {
+              letter-spacing: -0.5em;
+              -webkit-transform: translateZ(-700px);
+              transform: translateZ(-700px);
+              opacity: 0;
+            }
+            40% {
+              opacity: 0.6;
+            }
+            100% {
+              -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+              opacity: 1;
+            }
+          }
+        }
       }
     }
   }
 }
 
-@media (min-width:810px) {
+@media (min-width: 810px) {
   .thirdsection {
     gap: 5rem;
     padding: 7rem 2rem;
-  
-    .bottom{
+
+    .bottom {
       // border: 1px solid yellow;
       width: 100%;
     }
-  
-    .top {
 
+    .top {
       gap: 5rem;
       .left {
         height: 250px;
         width: 610px;
-  
+
         video {
         }
       }
-  
+
       .right {
         h1 {
-          
           font-size: 2rem;
-         
         }
       }
     }
   }
-  
 }
 
-
-@media (min-width:1199px) {
+@media (min-width: 1199px) {
   .thirdsection {
     background-color: black;
     display: flex;
@@ -106,12 +141,12 @@
     flex-direction: column;
     gap: 10rem;
     padding: 5rem;
-  
-    .bottom{
+
+    .bottom {
       // border: 1px solid yellow;
       width: 100%;
     }
-  
+
     .top {
       display: flex;
       justify-content: space-around;
@@ -127,7 +162,7 @@
         aspect-ratio: 0.98 / 1;
         background-size: cover;
         border-radius: 20px;
-  
+
         video {
           height: 100%;
           width: 100%;
@@ -135,7 +170,7 @@
           // border-radius: 0.4rem;
         }
       }
-  
+
       .right {
         h1 {
           width: 100%;
@@ -157,8 +192,6 @@
   }
 }
 
-
-
 @media (max-width: 430px) {
   .thirdsection {
     width: 100%;
@@ -169,12 +202,12 @@
     flex-direction: column;
     gap: 10rem;
     padding: 1.5rem;
-  
-    .bottom{
+
+    .bottom {
       // border: 1px solid yellow;
       width: 100%;
     }
-  
+
     .top {
       width: 100%;
       display: flex;
@@ -185,7 +218,7 @@
         height: 200px;
         width: 310px;
         border-radius: 15px;
-  
+
         video {
           height: 100%;
           width: 100%;
@@ -193,7 +226,7 @@
           // border-radius: 0.4rem;
         }
       }
-  
+
       .right {
         // border: 1px solid red;
         width: 100%;
@@ -209,5 +242,4 @@
       }
     }
   }
-  
 }
