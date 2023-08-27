@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Goblin+One&family=Martian+Mono:wght@200;400&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}

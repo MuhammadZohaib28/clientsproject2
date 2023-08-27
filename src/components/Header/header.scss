@@ -1,0 +1,154 @@
+header {
+  width: 100%;
+  height: 100vh;
+//   background-color: #d0cdd7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .logo {
+    height: 600px;
+    width: 620px;
+    // margin-top: -15rem;
+    z-index: 1;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .tagline {
+    // border: 1px solid red;
+    width: 60%;
+
+    h1 {
+      width: 100%;
+      font-weight: 400;
+      font-style: normal;
+      font-family: "Goblin One", sans-serif;
+      color: #000000;
+      font-size: 28.678187055797107px;
+      text-transform: uppercase;
+      line-height: 1;
+      text-align: center;
+    }
+  }
+}
+
+
+
+
+@media (min-width: 810px) {
+  header {
+    padding: 0 2rem;
+    // border: 1px solid red;
+  
+    .logo {
+      // border: 1px solid red;
+  
+      img {
+        // border: 1px solid red;
+
+      }
+    }
+  
+    .tagline {
+      // border: 1px solid red;
+      width: 100%;
+  
+      h1 {
+        // border: 1px solid red;
+      }
+    }
+  }
+  
+}
+
+
+@media (min-width:1199px) {
+  header {
+    width: 100%;
+    height: 100vh;
+  //   background-color: #d0cdd7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    .logo {
+      height: 600px;
+      width: 620px;
+      // margin-top: -15rem;
+      z-index: 1;
+  
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+  
+    .tagline {
+      // border: 1px solid red;
+      width: 60%;
+  
+      h1 {
+        width: 100%;
+        font-weight: 400;
+        font-style: normal;
+        font-family: "Goblin One", sans-serif;
+        color: #000000;
+        font-size: 28.678187055797107px;
+        text-transform: uppercase;
+        line-height: 1;
+        text-align: center;
+      }
+    }
+  }
+  
+}
+
+
+@media (max-width: 430px) {
+  header {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+  
+    .logo {
+      height: 300px;
+      width: 320px;
+      z-index: 1;
+  
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+  
+    .tagline {
+      // border: 1px solid red;
+      width: 100%;
+  
+      h1 {
+        width: 100%;
+        font-weight: 400;
+        font-style: normal;
+        font-family: "Goblin One", sans-serif;
+        color: #000000;
+        font-size: 1rem;
+        text-transform: uppercase;
+        line-height: 1;
+        text-align: center;
+      }
+    }
+  }
+}

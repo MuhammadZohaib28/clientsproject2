@@ -1,0 +1,259 @@
+.secondsection {
+  background-color: #416165;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5rem;
+
+  .image {
+    height: 250px;
+    width: 250px;
+
+    .img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+
+      &.active {
+        transform: translateX(45rem);
+        transition: all ease 2.5s;
+      }
+    }
+  }
+
+  .list {
+    // border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .listitem {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 2rem;
+      color: black;
+
+      &.active {
+        border: 1px solid rgb(242, 242, 242);
+        background-color: rgb(235, 235, 235);
+        color: black;
+        font-size: 700;
+        transform: translateX(-45rem);
+        transition: all ease 2.5s;
+        padding: 0.5rem 0.4rem;
+        border-radius: 0.3rem;
+
+        &:hover {
+          transform: all ease 0.4s;
+          background-color: yellow;
+          font-size: 700;
+        }
+      }
+
+      img {
+        height: 2rem;
+      }
+
+      span {
+        font-weight: 400;
+        font-style: normal;
+        font-family: "Playfair", "Playfair Placeholder", serif;
+        color: #000000;
+
+        font-size: 20px;
+        letter-spacing: 0em;
+        line-height: 1.5;
+
+        &.active {
+          color: black;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 810px) {
+  .secondsection {
+    padding: 5rem 2rem;
+
+    .image {
+      height: 200px;
+      width: 200px;
+
+      .img {
+
+        &.active {
+          transform: translateX(25rem);
+          transition: all ease 2.5s;
+        }
+      }
+    }
+
+    .list {
+      // border: 1px solid red;
+
+      gap: 1.5rem;
+
+      .listitem {
+        gap: 1rem;
+
+
+        &.active {
+          border: 1px solid rgb(242, 242, 242);
+          background-color: rgb(235, 235, 235);
+          color: black;
+          font-size: 700;
+          transform: translateX(-25rem);
+          transition: all ease 2.5s;
+          padding: 0.5rem 0.4rem;
+          border-radius: 0.3rem;
+  
+          &:hover {
+            transform: all ease 0.4s;
+            background-color: yellow;
+            font-size: 700;
+          }
+        }
+
+        img {
+          height: 1.5rem;
+        }
+
+        span {
+          font-size: 1.2rem;
+
+          &.active {
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1199px) {
+  .secondsection {
+    background-color: #416165;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5rem;
+
+    .image {
+      height: 250px;
+      width: 250px;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .list {
+      // border: 1px solid red;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      .listitem {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 2rem;
+
+        img {
+          height: 2rem;
+        }
+
+        span {
+          font-weight: 400;
+          font-style: normal;
+          font-family: "Playfair", "Playfair Placeholder", serif;
+          color: #ffffff;
+          font-size: 20px;
+          letter-spacing: 0em;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  .secondsection {
+    width: 100%;
+    background-color: #416165;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+
+    .image {
+      height: 250px;
+      width: 250px;
+
+      .img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+
+
+        &.active {
+          transform: translateY(20rem);
+          transition: all ease 2.5s;
+        }
+      }
+    }
+
+    .list {
+      // border: 1px solid red;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      .listitem {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 2rem;
+
+        &.active {
+          border: 1px solid rgb(242, 242, 242);
+          background-color: rgb(235, 235, 235);
+          color: black;
+          font-size: 700;
+          transform: translateY(-15rem);
+          transition: all ease 2.5s;
+          padding: 0.5rem 0.4rem;
+          border-radius: 0.3rem;
+
+          &:hover {
+            transform: all ease 0.4s;
+            background-color: yellow;
+            font-size: 700;
+          }
+        }
+
+        img {
+          height: 1.5rem;
+        }
+
+        span {
+          font-weight: 400;
+          font-style: normal;
+          font-family: "Playfair", "Playfair Placeholder", serif;
+          color: #000000;
+          font-size: 20px;
+          letter-spacing: 0em;
+          line-height: 1.5;
+          &.active {
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}
