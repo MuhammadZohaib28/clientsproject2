@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./secondsection.scss";
 import logo from '../../assets/logo.png'
 import { listdata } from "../data";
+import border from '../../assets/wave-haikei.svg'
 
 const SecondSection = () => {
   const [active, setActive] = useState(false);
@@ -20,6 +21,7 @@ const SecondSection = () => {
   }, []);
   return (
     <div className="secondsection">
+      <img src={border} alt="" className="border"/>
       <div className="image">
         <img src={logo} alt="" className={active ? "img active" : "img"}/>
       </div>

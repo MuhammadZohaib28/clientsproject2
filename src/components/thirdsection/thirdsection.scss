@@ -6,6 +6,13 @@
   flex-direction: column;
   gap: 10rem;
   padding: 5rem;
+  position: relative;
+
+  .border{
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
 
   .bottom{
     // border: 1px solid yellow;

@@ -6,10 +6,12 @@ import video from "../../assets/Untitled video - Made with Clipchamp (1).mp4";
 // import src from "../../assets/line.png";
 import Slider from "../slider/Slider";
 // import Slide from "../slide/Slide";
+import border from '../../assets/wave-haikei2.svg'
 
 const ThirdSection = () => {
   return (
     <div className="thirdsection">
+      <img src={border} alt="" className="border"/>
       <div className="top">
         <div className="left">
           <video src={video} autoPlay loop controls></video>

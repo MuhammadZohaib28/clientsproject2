@@ -4,6 +4,13 @@
   justify-content: space-around;
   align-items: center;
   padding: 5rem;
+  position: relative;
+
+  .border {
+    position: absolute;
+    width: 100%;
+    top: -2rem;
+  }
 
   .image {
     height: 250px;
@@ -82,7 +89,6 @@
       width: 200px;
 
       .img {
-
         &.active {
           transform: translateX(25rem);
           transition: all ease 2.5s;
@@ -98,7 +104,6 @@
       .listitem {
         gap: 1rem;
 
-
         &.active {
           border: 1px solid rgb(242, 242, 242);
           background-color: rgb(235, 235, 235);
@@ -108,7 +113,7 @@
           transition: all ease 2.5s;
           padding: 0.5rem 0.4rem;
           border-radius: 0.3rem;
-  
+
           &:hover {
             transform: all ease 0.4s;
             background-color: yellow;
@@ -149,7 +154,6 @@
         width: 100%;
         object-fit: contain;
 
-
         &.active {
           transform: translateX(45rem);
           transition: all ease 2.5s;
@@ -178,7 +182,7 @@
           transition: all ease 2.5s;
           padding: 0.5rem 0.4rem;
           border-radius: 0.3rem;
-  
+
           &:hover {
             transform: all ease 0.4s;
             background-color: yellow;
@@ -199,7 +203,6 @@
           letter-spacing: 0em;
           line-height: 1.5;
 
-
           &.active {
             color: black;
           }
@@ -218,6 +221,13 @@
     flex-direction: column;
     align-items: center;
     padding: 2rem;
+    position: relative;
+
+    .border {
+      position: absolute;
+      width: 100%;
+      top: 0rem;
+    }
 
     .image {
       height: 250px;
@@ -227,7 +237,6 @@
         height: 100%;
         width: 100%;
         object-fit: contain;
-
 
         &.active {
           transform: translateY(20rem);
