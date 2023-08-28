@@ -220,8 +220,8 @@ header {
       animation: text-focus-in 3.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
       @-webkit-keyframes text-focus-in {
         0% {
-          -webkit-filter: blur(12px);
-          filter: blur(12px);
+          -webkit-filter: blur(14px);
+          filter: blur(14px);
           opacity: 0;
         }
 
