@@ -23,7 +23,7 @@ const ThirdSection = () => {
   }, []);
   return (
     <div className="thirdsection">
-      <img src={border} alt="" className="border"/>
+      {/* <img src={border} alt="" className="border"/> */}
       <div className="top">
         <div className="left">
           <video src={video} autoPlay loop controls></video>
