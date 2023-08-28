@@ -1,15 +1,84 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { images } from "../data";
 import "./franchise.scss";
-import background from '../../assets/blob-scene-haikei.svg'
-import backgroundmobile from '../../assets/blob-scene-haikei2.svg'
-import border from '../../assets/wave-haikei3.svg'
 
 const Franchise = () => {
+  const [active, setActive] = useState(false);
+  const [active2, setActive2] = useState(false);
+  const [active3, setActive3] = useState(false);
+  const [prevScrollY, setPrevScrollY] = useState(0);
+
+  const isActive = () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > prevScrollY) {
+      // Scrolling down
+      if (currentScrollY > 2500) setActive(true);
+      if (currentScrollY > 3500) setActive2(true);
+      if (currentScrollY > 3700) setActive3(true);
+    } else {
+      // Scrolling up
+      if (currentScrollY <= 3700) setActive4(false);
+      if (currentScrollY <= 3500) setActive3(false);
+      if (currentScrollY <= 2500) setActive2(false);
+    }
+
+    setPrevScrollY(currentScrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", isActive);
+
+    return () => {
+      window.removeEventListener("scroll", isActive);
+    };
+  }, []);
   return (
     <div className="franchise">
-      <img src={background} alt="" className="bg"/>
-      <img src={backgroundmobile} alt="" className="bgmobile"/>
+      <div className="points">
+        <h1>
+          Franchise with <span>On the Way</span>
+        </h1>
+        <h1>Step into the Future of Retail</h1>
+        <p>
+          Become a pivotal part of a transformative retail experience. With 'On
+          the Way', you're not just starting a business; you're pioneering a
+          groundbreaking approach to shopping in Saudi Arabia.
+        </p>
+
+        <h1>
+          Why Partner with <span>'On the Way'</span>
+        </h1>
+
+        <div className="licontainer">
+            <div className="listcontainer">
+              <span className={active ? "active" : ""}>Futuristic Retail</span>
+              <li className={active ? "active" : ""}>
+                Offer customers an unmatched, AI-driven shopping experience that
+                is redefining industry standards.
+              </li>
+            </div>
+
+            <div className="listcontainer">
+              <span className={active2 ? "active" : ""}>End-to-End Support</span>
+              <li className={active2 ? "active" : ""}>
+              From technology to training, receive holistic support to ensure your franchise's success.
+
+              </li>
+            </div>
+
+            <div className="listcontainer">
+              <span className={active3 ? "active" : ""}>Expansive Growth</span>
+              <li className={active3 ? "active" : ""}>
+              Position yourself at the forefront of an industry trend with vast
+
+              </li>
+            </div>
+        </div>
+      </div>
+
+      {/* <img src={background} alt="" className="bg" /> */}
+      {/* <img src={backgroundmobile} alt="" className="bgmobile" /> */}
       <h1>Book a franchise</h1>
       {/* <img src={border} alt="" className="border"/> */}
 
@@ -28,9 +97,7 @@ const Franchise = () => {
           rows="8"
           placeholder="Message"
         />
-        <button type="submit">
-          Sign Up
-        </button>
+        <button type="submit">Sign Up</button>
       </form>
 
       <div className="images">
