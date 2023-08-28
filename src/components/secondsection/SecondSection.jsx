@@ -48,7 +48,7 @@ const SecondSection = () => {
   }, []);
   return (
     <div className="secondsection">
-      <img src={border} alt="" className="border"/>
+      {/* <img src={border} alt="" className="border"/> */}
       <div className="image">
         <img src={logo} alt="" className="img"/>
       </div>
