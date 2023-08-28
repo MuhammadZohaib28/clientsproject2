@@ -13,22 +13,22 @@ header {
     // margin-top: -15rem;
     z-index: 1;
 
-    img {
-      height: 100%;
-      width: 100%;
-      object-fit: contain;
-      animation: headerSlideIn 1.9s ease-in-out;
-      @keyframes headerSlideIn {
-        from {
-          transform: translateX(-100%);
-          opacity: 0;
-        }
-        to {
-          transform: translateX(0);
-          opacity: 1;
-        }
-      }
-    }
+    // img {
+    //   height: 100%;
+    //   width: 100%;
+    //   object-fit: contain;
+    //   animation: headerSlideIn 1.9s ease-in-out;
+    //   @keyframes headerSlideIn {
+    //     from {
+    //       transform: translateX(-100%);
+    //       opacity: 0;
+    //     }
+    //     to {
+    //       transform: translateX(0);
+    //       opacity: 1;
+    //     }
+    //   }
+    // }
   }
 
   .tagline {
@@ -114,6 +114,18 @@ header {
             filter: blur(12px);
             opacity: 0;
           }
+
+          25%{
+            -webkit-filter: blur(6px);
+            filter: blur(6px);
+            opacity: 0;
+          }
+          50%{
+            -webkit-filter: blur(3px);
+            filter: blur(3px);
+            opacity: 0;
+          }
+          
           100% {
             -webkit-filter: blur(0px);
             filter: blur(0px);
@@ -203,17 +215,33 @@ header {
         height: 100%;
         width: 100%;
         object-fit: contain;
-        animation: headerSlideIn 1.9s ease-in-out;
-        @keyframes headerSlideIn {
-          from {
-            transform: translateY(-100%);
-            opacity: 0;
-          }
-          to {
-            transform: translateY(0);
-            opacity: 1;
-          }
+        -webkit-animation: text-focus-in 3s
+        cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+      animation: text-focus-in 3.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+      @-webkit-keyframes text-focus-in {
+        0% {
+          -webkit-filter: blur(12px);
+          filter: blur(12px);
+          opacity: 0;
         }
+
+        25%{
+          -webkit-filter: blur(6px);
+          filter: blur(6px);
+          opacity: 0;
+        }
+        50%{
+          -webkit-filter: blur(3px);
+          filter: blur(3px);
+          opacity: 0;
+        }
+        
+        100% {
+          -webkit-filter: blur(0px);
+          filter: blur(0px);
+          opacity: 1;
+        }
+      }
       }
     }
 
