@@ -6,7 +6,7 @@ const Franchise = () => {
   const [active, setActive] = useState(false);
   const [active2, setActive2] = useState(false);
   const [active3, setActive3] = useState(false);
-  const [prevScrollY, setPrevScrollY] = useState(0);
+  const [prevScrollY, setPrevScrollY] = useState(2);
 
   const isActive = () => {
     const currentScrollY = window.scrollY;
@@ -14,13 +14,13 @@ const Franchise = () => {
     if (currentScrollY > prevScrollY) {
       // Scrolling down
       if (currentScrollY > 2500) setActive(true);
-      if (currentScrollY > 3500) setActive2(true);
+      if (currentScrollY > 3400) setActive2(true);
       if (currentScrollY > 3700) setActive3(true);
     } else {
       // Scrolling up
-      if (currentScrollY <= 3700) setActive4(false);
-      if (currentScrollY <= 3500) setActive3(false);
-      if (currentScrollY <= 2500) setActive2(false);
+      if (currentScrollY <= 3700) setActive3(false);
+      if (currentScrollY <= 3400) setActive2(false);
+      if (currentScrollY <= 2500) setActive(false);
     }
 
     setPrevScrollY(currentScrollY);

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./footer.scss";
-import line from '../../assets/line.png'
-
+import line from "../../assets/line.png";
 
 const Footer = () => {
   const [active, setActive] = useState(false);
@@ -16,7 +15,6 @@ const Footer = () => {
     setActive(window.scrollY > 1300);
   };
 
-
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
 
@@ -26,8 +24,13 @@ const Footer = () => {
   }, []);
   return (
     <div className="footer">
-      
-       <img src={line} className={active ? "img active" : "img"} style={{ marginLeft: `${marginLeft}px` }}/>
+
+        <img
+          src={line}
+          className={active ? "img active" : "img"}
+          style={{ marginLeft: `${marginLeft}px` }}
+        />
+
       <div className="socialicons">
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32">
           <path d="M 0 0 L 32 0 L 32 32 L 0 32 Z" fill="transparent"></path>
@@ -57,12 +60,10 @@ const Footer = () => {
         </svg>
       </div>
 
-
-    <div className="span">
-
-      <span className="span1">© 2023 TechGrocer. All rights reserved.</span>
-      <span className="span2">Generated on Friday, August 25, 2023</span>
-    </div>
+      <div className="span">
+        <span className="span1">© 2023 TechGrocer. All rights reserved.</span>
+        <span className="span2">Generated on Friday, August 25, 2023</span>
+      </div>
     </div>
   );
 };

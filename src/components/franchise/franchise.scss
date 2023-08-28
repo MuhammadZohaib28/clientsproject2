@@ -320,13 +320,18 @@
   
         .listcontainer {
           margin-top: 10rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 14rem;
+          border: 1px solid red;
           span {
             font-size: 0.014rem;
             transform: translateX(500rem);
     
             &.active {
               transform: translateX(10rem);
-              font-size: 7rem;
+              font-size: 6rem;
               transition: all ease 1.4s;
               // border: 4px solid red;
             }
