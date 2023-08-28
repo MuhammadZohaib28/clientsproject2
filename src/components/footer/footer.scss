@@ -99,9 +99,12 @@
       flex-direction: column;
       align-items: center;
       margin: 1.5rem auto;
+      
 
       .span1 {
         font-size: 1.4rem;
+
+        
       }
 
       .span2 {
@@ -114,6 +117,8 @@
       justify-content: space-around;
       align-items: center;
       gap: 2rem;
+
+      
     }
   }
 }
@@ -125,13 +130,40 @@
     padding: 10rem 2rem 1rem 2rem;
     gap: 1rem;
 
+    .img{
+      // border: 1px solid red;
+      width: -1%;
+      height: 20rem;
+      margin-bottom: 9rem;
+      // background-color: #050505; 
+
+      &.active{
+        // border: 1px solid red;
+        // transition: all ease 0.3s;
+        // width: 750%;
+        // height: 100%;
+      }
+      
+    }
+
+    
+
     .span {
+      
       .span1 {
         width: 100%;
         font-size: 1rem;
+        &:hover{
+          cursor: pointer;
+          color: yellow;
+        }
       }
 
       .span2 {
+        &:hover{
+          cursor: pointer;
+         color: yellow;
+        }
       }
     }
 
